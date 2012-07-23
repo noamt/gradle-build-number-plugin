@@ -1,0 +1,13 @@
+import main.groovy.org._10ne.gradle.plugin.BuildNumberPlugin
+
+apply plugin: 'java'
+apply plugin: BuildNumberPlugin
+
+group = 'org._10ne.gradle'
+version = '0.1.1-SNAPSHOT'
+
+buildNumber {
+    scmType = "git"
+    writeToManifest = true
+    output = true
+}
